@@ -6,10 +6,9 @@ function generateRandomNumber() {
     return Math.floor(10000 + Math.random() * 90000);
 }
 let balances = [0];
-let conditions = true;
-while (conditions) {
-    // prompt user for student name
-    const studentName = await inquirer.prompt([
+
+// prompt user for student name
+const studentName = await inquirer.prompt([
         {
             name: "name",
             type: "string",
@@ -52,7 +51,6 @@ while (conditions) {
                 "Web Designing",
                 "NodeJS",
             ],
-            default: "false"
         },
     ]);
     // Define course fees
@@ -143,6 +141,4 @@ while (conditions) {
     }
     else {
         console.log(chalk.redBright(`\n Invalid amount, please try again`));
-    }
-}
-;
+    };
