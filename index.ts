@@ -9,9 +9,6 @@ function generateRandomNumber() {
 
 let balances: number[] = [0];
 
-let conditions: boolean = true;
-
-while (conditions) {
 // prompt user for student name
 const studentName = await inquirer.prompt([
   {
@@ -58,7 +55,6 @@ const courses = await inquirer.prompt([
       "Web Designing",
       "NodeJS",
     ],
-    default: "false"
   },
 ]);
 
@@ -157,5 +153,4 @@ if (coursefees === paymentAmount) {
   }
 } else {
   console.log(chalk.redBright(`\n Invalid amount, please try again`));
-}
 };
