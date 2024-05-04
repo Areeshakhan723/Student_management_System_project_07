@@ -96,7 +96,7 @@ const studentName = await inquirer.prompt([
         },
         {
             name: "amount",
-            message: chalk.greenBright("How much money you want to transfer!"),
+            message: chalk.greenBright("Please Enter Your Course Fees!"),
             type: "input",
             validate: function (value) {
                 if (value.trim() !== "") {
@@ -131,7 +131,7 @@ const studentName = await inquirer.prompt([
             console.log(chalk.whiteBright("\u2022") + " Payment Amount: " + paymentMethods.amount);
             // Get the last element of the balances array
             let currentBalance = balances[balances.length - 1];
-            let updatedBalance = currentBalance += paymentAmount;
+            let updatedBalance = currentBalance -= paymentAmount;
             balances.push(updatedBalance);
             console.log(chalk.whiteBright("\u2022") + " Balance: " + updatedBalance);
         }
